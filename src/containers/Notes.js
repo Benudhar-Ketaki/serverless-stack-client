@@ -41,8 +41,12 @@ export default function Notes() {
     }
 
     function formatFilename(str) {
-        return str.replace(/^\w+-/, "");
+        if (typeof str === 'string') {
+            return str.replace(/^\w+-/, "");
+        }
+        return "Unknown file";
     }
+
 
     function handleFileChange(event) {
         file.current = event.target.files[0];

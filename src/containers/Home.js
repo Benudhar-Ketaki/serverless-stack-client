@@ -75,11 +75,10 @@ export default function Home() {
                                         src={imageUrl}
                                         alt={`Note ${content.trim().split("\n")[0] || "Image"}`}
                                         className="note-image"
-                                        onError={(e) =>
-                                            (e.target.src = "/default-image.png")
-                                        }
+                                        onError={(e) => e.target.src = "/default-image.png"} // Fallback on error
                                     />
                                 )}
+
                                 <div>
                                     <span className="font-weight-bold">
                                         {content.trim().split("\n")[0]}

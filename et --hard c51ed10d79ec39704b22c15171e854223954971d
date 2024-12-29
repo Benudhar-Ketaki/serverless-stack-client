@@ -1,0 +1,60 @@
+[33mcommit 91c1c708df91d338c908b1bff7b2b3cd7ccfcc3b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Benudhar Ketaki <benuketki75@gmail.com>
+Date:   Thu Dec 26 23:54:42 2024 +0530
+
+    Adding create fiel
+
+[33mcommit c51ed10d79ec39704b22c15171e854223954971d[m
+Author: Benudhar Ketaki <benuketki75@gmail.com>
+Date:   Sun Dec 22 17:11:14 2024 +0530
+
+    final push-3
+
+[33mcommit c4e9f8ca4926c260c0defdb188bfbb81652c3e28[m
+Author: Benudhar Ketaki <benuketki75@gmail.com>
+Date:   Sun Dec 22 16:53:41 2024 +0530
+
+    final push-2
+
+[33mcommit 8b694cd7ab5b813921d53bccea56a87754744981[m
+Author: Benudhar Ketaki <benuketki75@gmail.com>
+Date:   Sat Dec 21 11:17:44 2024 +0530
+
+    final push
+
+[33mcommit 88d897b805555639432c85ec5bae34fa0d259bd2[m
+Merge: 7251596 18b08c7
+Author: Benudhar Ketaki <benuketki75@gmail.com>
+Date:   Fri Dec 20 23:19:24 2024 +0530
+
+    Merge branch 'main' of https://github.com/Benudhar-Ketaki/serverless-stack-client
+
+[33mcommit 7251596d56a10d818c60df58f8165dd151278ea0[m
+Author: Benudhar Ketaki <benuketki75@gmail.com>
+Date:   Fri Dec 20 23:17:54 2024 +0530
+
+    Small change
+
+[33mcommit 18b08c7c273883a47cd9c4e79d4ab1f0002633ed[m
+Author: Benudhar-Ketaki <benuketki75@gmail.com>
+Date:   Fri Dec 20 22:24:35 2024 +0530
+
+    Update Home.js
+
+[33mcommit 55cf3aba52f73bc5553e352dd66939654a0a141b[m
+Author: Benudhar Ketaki <benuketki75@gmail.com>
+Date:   Fri Dec 20 21:34:26 2024 +0530
+
+    Building Note taking app
+
+[33mcommit 9adba65742cc29da56b101221557c2fcce96ea9d[m
+Author: Benudhar Ketaki <benuketki75@gmail.com>
+Date:   Thu Dec 19 19:11:33 2024 +0530
+
+    Setting up our React app
+
+[33mcommit 76e7a95c6e4996867e56911142740bcd393f184c[m
+Author: Benudhar Ketaki <benuketki75@gmail.com>
+Date:   Thu Dec 19 17:18:44 2024 +0530
+
+    First commit
