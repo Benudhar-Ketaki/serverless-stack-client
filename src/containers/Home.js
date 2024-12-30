@@ -45,13 +45,15 @@ export default function Home() {
     function handleSearch(event) {
         const term = event.target.value.toLowerCase();
         setSearchTerm(term);
+
         setFilteredNotes(
             notes.filter((note) =>
                 note.content.toLowerCase().includes(term) ||
-                (note.attachment && note.attachment.toLowerCase().includes(term))
+                (note.attachment && typeof note.attachment === "string" && note.attachment.toLowerCase().includes(term))
             )
         );
     }
+
 
     const BASE_URL = "https://notes-api-uploads.s3.us-east-1.amazonaws.com";
 
@@ -65,24 +67,26 @@ export default function Home() {
                     </ListGroup.Item>
                 </LinkContainer>
                 {notes.map(({ noteId, content, createdAt, attachment }) => {
-                    const imageUrl = attachment ? `${BASE_URL}/${attachment}` : null;
+                    const safeContent = typeof content === "string" ? content : "No content available";
+                    const safeAttachment = typeof attachment === "string" ? attachment : null;
+
+                    const imageUrl = safeAttachment ? `${BASE_URL}/${safeAttachment}` : null;
 
                     return (
                         <LinkContainer key={noteId} to={`/notes/${noteId}`}>
                             <ListGroup.Item action className="d-flex align-items-center">
+                                {/* Display the image if it exists */}
                                 {imageUrl && (
                                     <img
                                         src={imageUrl}
-                                        alt={`Note ${content.trim().split("\n")[0] || "Image"}`}
+                                        alt={`Note ${safeContent.trim().split("\n")[0]}`}
                                         className="note-image"
-                                        onError={(e) =>
-                                            (e.target.src = "/default-image.png")
-                                        }
+                                        onError={(e) => (e.target.src = "/default-image.png")}
                                     />
                                 )}
                                 <div>
                                     <span className="font-weight-bold">
-                                        {content.trim().split("\n")[0]}
+                                        {safeContent.trim().split("\n")[0]}
                                     </span>
                                     <br />
                                     <span className="text-muted">
@@ -96,6 +100,7 @@ export default function Home() {
             </>
         );
     }
+
 
     function renderLander() {
         return (
