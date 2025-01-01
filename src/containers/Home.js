@@ -8,6 +8,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import { API } from "aws-amplify";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import Spinner from "react-bootstrap/Spinner"; // For loading spinner
 import "./Home.css";
 
 export default function Home() {
@@ -17,6 +18,8 @@ export default function Home() {
     const [greet, setGreet] = useState();
     const { isAuthenticated } = useAppContext();
     const [isLoading, setIsLoading] = useState(true);
+
+    const BASE_URL = "https://notes-api-uploads.s3.us-east-1.amazonaws.com";
 
     useEffect(() => {
         async function onLoad() {
@@ -54,9 +57,6 @@ export default function Home() {
         );
     }
 
-
-    const BASE_URL = "https://notes-api-uploads.s3.us-east-1.amazonaws.com";
-
     function renderNotesList(notes) {
         return (
             <>
@@ -66,11 +66,13 @@ export default function Home() {
                         <span className="ml-2 font-weight-bold">Create a new note</span>
                     </ListGroup.Item>
                 </LinkContainer>
-                {notes.map(({ noteId, content, createdAt, attachment }) => {
+                {notes.map(({ noteId, content, createdAt, attachment, userId }) => {
                     const safeContent = typeof content === "string" ? content : "No content available";
                     const safeAttachment = typeof attachment === "string" ? attachment : null;
 
-                    const imageUrl = safeAttachment ? `${BASE_URL}/${safeAttachment}` : null;
+                    const filePath = `private/${userId}/${safeAttachment}`;
+                    const encodedKey = encodeURIComponent(filePath);
+                    const imageUrl = `${BASE_URL}/${encodedKey}`;
 
                     return (
                         <LinkContainer key={noteId} to={`/notes/${noteId}`}>
@@ -100,7 +102,6 @@ export default function Home() {
             </>
         );
     }
-
 
     function renderLander() {
         return (
@@ -134,10 +135,13 @@ export default function Home() {
                         onChange={handleSearch}
                     />
                 </Form>
-                {!isLoading ? (
-                    <ListGroup>{renderNotesList(filteredNotes)}</ListGroup>
+                {isLoading ? (
+                    <div className="text-center">
+                        <Spinner animation="border" />
+                        <p>Loading notes...</p>
+                    </div>
                 ) : (
-                    <p>Loading notes...</p>
+                    <ListGroup>{renderNotesList(filteredNotes)}</ListGroup>
                 )}
             </div>
         );

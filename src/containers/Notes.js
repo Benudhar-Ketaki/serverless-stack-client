@@ -47,7 +47,6 @@ export default function Notes() {
         return "Unknown file";
     }
 
-
     function handleFileChange(event) {
         file.current = event.target.files[0];
     }
