@@ -57,6 +57,21 @@ export default function Home() {
         );
     }
 
+    async function handleDeleteAll() {
+        const confirmed = window.confirm(
+            "Are you sure you want to delete all your notes? This action cannot be undone."
+        );
+        if (!confirmed) return;
+        try {
+            await API.del("notes", "/notes");
+            setNotes([]);
+            setFilteredNotes([]);
+            alert("All notes have been deleted.");
+        } catch (e) {
+            onError(e);
+        }
+    }
+
     function renderNotesList(notes) {
         return (
             <>
@@ -66,6 +81,14 @@ export default function Home() {
                         <span className="ml-2 font-weight-bold">Create a new note</span>
                     </ListGroup.Item>
                 </LinkContainer>
+
+                <ListGroup.Item
+                    action
+                    className="py-3 text-center font-weight-bold text-danger"
+                    onClick={handleDeleteAll}
+                >
+                    Delete All Notes
+                </ListGroup.Item>
                 {notes.map(({ noteId, content, createdAt, attachment, userId }) => {
                     const safeContent = typeof content === "string" ? content : "No content available";
                     const safeAttachment = typeof attachment === "string" ? attachment : null;
