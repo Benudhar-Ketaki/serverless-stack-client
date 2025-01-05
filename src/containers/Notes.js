@@ -115,7 +115,7 @@ export default function Notes() {
                         />
                     </Form.Group>
                     <Form.Group controlId="file">
-                        <Form.Label>Attachment</Form.Label>
+                        <Form.Label>Attachment :</Form.Label>
                         {note.attachment && (
                             <p>
                                 <a
@@ -127,7 +127,8 @@ export default function Notes() {
                                 </a>
                             </p>
                         )}
-                        <Form.Control onChange={handleFileChange} type="file" />
+                        {/* Form.Control */}
+                        <input onChange={handleFileChange} type="file" />
                     </Form.Group>
                     <LoaderButton
                         block

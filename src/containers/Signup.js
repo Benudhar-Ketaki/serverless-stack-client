@@ -134,6 +134,7 @@ export default function Signup() {
     }
     return (
         <div className="Signup">
+            <h1 className="signup-heading">SignUp</h1>
             {newUser === null ? renderForm() : renderConfirmationForm()}
         </div>
     );

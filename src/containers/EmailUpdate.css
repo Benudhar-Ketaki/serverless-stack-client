@@ -1,14 +1,103 @@
-@media all and (min-width: 480px) {
-    .EmailChange {
-        padding: 60px 0;
-    }
+/* Global styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9fafb;
+    margin: 0;
+    padding: 0;
+}
 
-    .EmailChange form {
-        margin: 0 auto;
-        max-width: 320px;
+/* Container styling */
+.EmailChange {
+    padding: 60px 15px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 60px auto;
+    max-width: 400px;
+    border: 1px solid #e0e4e8;
+}
+
+/* Header styling */
+.EmailChange h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 25px;
+}
+
+/* Form input styling */
+.EmailChange form {
+    margin: 0 auto;
+}
+
+.EmailChange form .form-group {
+    margin-bottom: 20px;
+}
+
+.EmailChange form .form-label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #555555;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.EmailChange form .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    height: 40px;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #333333;
+    box-shadow: none;
+    transition: border-color 0.2s;
+}
+
+.EmailChange form .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.25);
+}
+
+/* Loader button styling */
+.LoaderButton {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.LoaderButton:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.LoaderButton:hover:not(:disabled) {
+    background-color: #0056b3;
+    transform: scale(1.02);
+}
+
+/* Muted text styling */
+.EmailChange form .form-text {
+    font-size: 12px;
+    color: #6c757d;
+}
+
+/* Responsive styling */
+@media all and (max-width: 480px) {
+    .EmailChange {
+        padding: 40px 15px;
+        margin: 30px auto;
     }
 
     .EmailChange h2 {
-        padding-bottom: 25px;
+        font-size: 20px;
     }
 }

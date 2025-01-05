@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap'); */
 
 /* General Styles */
-body {
+/* body {
     margin: 0;
     padding: 0;
     font-family: "Ubuntu", Arial, sans-serif;
@@ -76,7 +77,122 @@ body {
 }
 
 /* Utility for consistent form styling */
+/* .notes .form-control {
+    margin-bottom: 20px;
+    font-size: 16px;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", Arial, sans-serif;
+    background: linear-gradient(to bottom, #a18cd1, #fbc2eb);
+    background-attachment: fixed;
+    background-size: cover;
+    color: #333;
+}
+
+.Home .lander {
+    padding: 80px 0;
+    text-align: center;
+    color: #505a5d;
+    background-image: url("../note1.jpg");
+    background-size: cover;  /* Ensures the image covers the whole container */
+    background-position: center;  /* Centers the image */
+    background-attachment: fixed;  /* Makes the image fixed while scrolling */
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 700px;
+}
+
+.Home .lander h1 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+.Home h2 {
+    margin: 20px 0;
+    color: #222222; /* Dark gray for strong contrast */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6); /* Soft white shadow for readability */
+    font-weight: 700; /* Bold for emphasis */
+}
+
+.Home h2 span {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 25px;
+    color: #000000; /* Black for maximum contrast */
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.6); /* Light shadow for standout effect */
+    font-weight: 700; /* Bold for prominence */
+}
+
+
+.box {
+    margin-top: 30px;
+}
+
+.Home .notes {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.Home .notes .form-control {
+    margin-bottom: 20px;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.Home .notes .list-group-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    background: #f9f9f9;
+}
+
+.Home .notes .list-group-item:hover {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
+}
+
+.note-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 12px;
+    border: 1px solid #ddd;
+}
+
+.Home .notes .font-weight-bold {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    color: #495057;
+}
+
+.Home .notes .text-muted {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+/* Utility for consistent form styling */
 .notes .form-control {
     margin-bottom: 20px;
     font-size: 16px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #495057;
+    border: 1px solid #ced4da;
 }

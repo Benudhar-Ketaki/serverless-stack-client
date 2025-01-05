@@ -1,4 +1,115 @@
+.Notes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px;
+    color: #333;
+}
+
+.Notes form {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 630px;
+    margin-top: 10px;
+}
+
+.Notes form .form-control {
+    font-size: 16px;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.Notes form .form-control:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+}
+
+.Notes form .form-label {
+    font-weight: bold;
+    color: #495057;
+    margin-bottom: 8px;
+}
+
 .Notes form textarea {
-    height: 300px;
+    height: 190px;
     font-size: 1.5rem;
+    resize: none;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    margin-bottom: 20px;
+}
+
+.Notes form textarea:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+}
+
+.Notes form .file-label {
+    font-size: 1rem;
+    color: #495057;
+}
+
+.Notes form p {
+    font-size: 1rem;
+    color: #6c63ff;
+    margin: 10px 0;
+}
+
+.Notes form a {
+    color: #6c63ff;
+    text-decoration: none;
+}
+
+.Notes form a:hover {
+    text-decoration: underline;
+}
+
+.Notes .LoaderButton {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    background: #6c63ff;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 15px;
+}
+
+.Notes .LoaderButton:hover {
+    background: #5146d0;
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+.Notes .LoaderButton:disabled {
+    background: #ddd;
+    cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media all and (min-width: 480px) {
+    .Notes form {
+        padding: 40px 30px;
+    }
+
+    .Notes form .form-label {
+        font-size: 14px;
+    }
+
+    .Notes form textarea {
+        font-size: 1.4rem;
+    }
+
+    .Notes .LoaderButton {
+        font-size: 1.3rem;
+    }
 }

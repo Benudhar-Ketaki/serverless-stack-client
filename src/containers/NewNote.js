@@ -63,8 +63,9 @@ export default function NewNote() {
                     />
                 </Form.Group>
                 <Form.Group controlId="file">
-                    <Form.Label>Attachment</Form.Label>
-                    <Form.Control onChange={handleFileChange} type="file" />
+                    <Form.Label>Attachment :</Form.Label>
+                    {/* Form.Control */}
+                    <input onChange={handleFileChange} type="file" />
                 </Form.Group>
                 <LoaderButton
                     block

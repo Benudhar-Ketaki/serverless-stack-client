@@ -5,9 +5,74 @@
 
     .Signup form {
         margin: 0 auto;
-        max-width: 320px;
+        max-width: 400px;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-    .Signup h2{
+
+    .signup-heading {
+        text-align: center;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 36px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .Signup h2 {
         padding-bottom: 25px;
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 28px;
+        color: #333;
+    }
+
+    .Signup .form-group {
+        margin-bottom: 10px;
+    }
+
+    .Signup .form-label {
+        font-weight: 600;
+        font-size: 14px;
+        color: #555;
+    }
+
+    .Signup .form-control {
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .Signup .form-control:focus {
+        border-color: #66afe9;
+        box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+    }
+
+    .Signup .form-text {
+        font-size: 12px;
+        color: #6c757d;
+    }
+
+    .Signup .form-footer {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .Signup .form-footer a {
+        color: #007bff;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    .Signup .form-footer a:hover {
+        text-decoration: underline;
+    }
+
+    .Signup .LoaderButton {
+        width: 100%;
+        margin-top: 15px;
     }
 }
