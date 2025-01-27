@@ -1,26 +1,32 @@
 .App {
     font-family: "Ubuntu", Arial, sans-serif;
-    min-height: 80vh;
+    min-height: 100vh;
+    min-width: 100%;
     display: flex;
     top: 0;
     flex-direction: column;
+    background: linear-gradient(to right,#e4f4ec,#d0e1d8,#b4deca,#cae2d7);
 }
 
 .navbar {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(221, 221, 222, 0.737);
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #9ecbcd;
 }
 
 .navbar-brand {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #6c63ff;
+    color: #8686dc;
     transition: color 0.3s ease;
 }
 
 .navbar-brand:hover {
-    color: #5146d0;
+    color: #d5d3ea;
 }
 
 .navbar-toggler {
@@ -28,7 +34,7 @@
 }
 
 .navbar-toggler-icon {
-    background-color: #5146d0;
+    background-color: #e6e6ec;
 }
 
 .navbar .nav-link {
@@ -38,11 +44,11 @@
 }
 
 .navbar .nav-link:hover {
-    color: #6c63ff;
+    color: #c8c7df;
 }
 
 .navbar .nav-link.active {
-    color: #5146d0;
+    color: #c0beda;
     font-weight: bold;
 }
 

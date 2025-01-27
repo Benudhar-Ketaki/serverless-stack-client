@@ -10,6 +10,7 @@ import ForgetPassword from "./containers/ForgetPassword";
 import AuthenticatedRoute from "./components/AuthenticatedRoute";
 import UnauthenticatedRoute from "./components/UnauthenticatedRoute";
 import EmailUpdate from "./containers/EmailUpdate";
+import LoginSignup from "./containers/LoginSignup";
 export default function Routes() {
     return (
         <Switch>
@@ -21,6 +22,9 @@ export default function Routes() {
             </UnauthenticatedRoute>
             <UnauthenticatedRoute exact path="/signup">
                 <Signup />
+            </UnauthenticatedRoute>
+            <UnauthenticatedRoute exact path="/loginsignup">
+                <LoginSignup />
             </UnauthenticatedRoute>
             <UnauthenticatedRoute exact path="/forget">
                 <ForgetPassword />

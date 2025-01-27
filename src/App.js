@@ -17,12 +17,13 @@ function App() {
   async function handleLogout() {
     await Auth.signOut();
     userHasAuthenticated(false);
-    history.push("/login");
+    history.push("/");
   }
 
   useEffect(() => {
     onLoad();
   }, []);
+
   async function onLoad() {
     try {
       await Auth.currentSession();
@@ -38,14 +39,14 @@ function App() {
   return (
     !isAuthenticating && (
       <div className="App container py-3">
-        <Navbar collapseOnSelect bg="light" expand="md">
+        <Navbar collapseOnSelect expand="md">
           <LinkContainer to="/">
             <Navbar.Brand className="font-weight-bold text-muted">
               NoteApp
             </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle />
-          <Navbar.Collapse className="justify-content-end">
+          <Navbar.Collapse className="justify-content-end"  >
             <Nav activeKey={window.location.pathname}>
               {isAuthenticated ? (
                 <>

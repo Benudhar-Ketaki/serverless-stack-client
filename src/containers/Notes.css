@@ -113,3 +113,54 @@
         font-size: 1.3rem;
     }
 }
+
+.note-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 60%;
+}
+
+.note-view-card {
+    background: #ffffff; /* White card background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 24px;
+    width: 100%;
+    max-width: 600px; /* Match form width */
+    text-align: center;
+}
+
+.note-image-large {
+    width: 100%;
+    max-height: 500px; /* Adjust to fit form size */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.note-view-content {
+    margin-top: 16px;
+}
+
+.note-title {
+    font-size: 1.75rem; /* Match title size with form input labels */
+    color: #333;
+    margin-bottom: 16px;
+    word-wrap: break-word;
+}
+
+.edit-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+    background-color: #0056b3;
+}
